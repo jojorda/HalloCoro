@@ -15,7 +15,7 @@ export default function Hero() {
             >
                 <Link to="/patient/consultation">
                     <button
-                        style={{ margin: "15rem",  padding:"3px", border: "0px",  backgroundColor: "#F5F5F5",  height: "70px",
+                        style={{ margin: "15rem",  padding:"3px", borderRadius:"10px", border: "0px",  backgroundColor: "#F5F5F5",  height: "70px",
                             width:"400px", marginTop: "8rem", marginLeft: "8rem",
                             backgroundRepeat: "no-repeat",  backgroundSize: "15%",
                             backgroundPosition: "left center ",
