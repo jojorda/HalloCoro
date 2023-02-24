@@ -43,7 +43,7 @@ export default function ReplyReserv() {
             },
         };
         const response = await API.get("/consultation/" + id, config);
-        // console.log(response);
+        console.log(response);
         setForm({
             id: response.data.data.id,
             age: response.data.data.age,
@@ -95,7 +95,7 @@ export default function ReplyReserv() {
             };
 
             const response = await API.patch("/consultation/" + id, data);
-            // console.log(response);
+            console.log(response);
             navigate("/doctor");
         } catch (error) {
             console.log(error);
