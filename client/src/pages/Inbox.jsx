@@ -40,7 +40,7 @@ export default function Inbox() {
                                              height:"60px", objectFit:"cover" }}
                                         />
                                     </div>
-                                    <div className="">
+                                    <div className="inbox-right">
                                         <h4 style={{ fontWeight: "700" }}>{item?.subject}</h4>
                                         <small className="text-muted">
                                             Last update:{" "}
@@ -48,7 +48,7 @@ export default function Inbox() {
                                         </small>
                                         <div className="mt-1 ms-4 cons-box">Keluhan: {item?.desc}</div>
                                     </div>
-                                    <div >
+                                    <div className="ms-3 d-block">
                                         <p className="d-flex justify-content-end">
                                             {moment(item?.createdAt).format("DD MMMM YYYY")}
                                         </p>
