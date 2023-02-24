@@ -62,10 +62,10 @@ export default function AddArticle() {
 
     return (
         <div>
-            <div className="container d-flex justify-content-center p-5" style={{ marginTop: "10vh", marginRight: "200px" }}>
+            <div className="container d-flex justify-content-center p-5" >
                 <h2 style={{ color: "#FF6185", fontWeight: "700" }}>Add Article</h2>
             </div>
-            <div className="container d-flex justify-content-center" style={{ marginRight: "190px" }}>
+            <div className="container d-flex justify-content-center" >
                 <Form >
                     <Form.Group className="mb-3">
                         <Form.Label className="label">Title</Form.Label>
