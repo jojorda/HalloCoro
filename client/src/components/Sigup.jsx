@@ -65,9 +65,9 @@ export default function Signup({ signUpShow, setSignUpShow, signUpHere, setSignI
 
             const response = await API.post("/register", body, config);
             alert("Register succses, Silahkan Sign In ..!");      
+            setSignUpShow(false)
            
                 // console.log("habis register : ", response); 
-                setSignUpShow(false)
                 // setSignInShow(true
 
         } catch (error) {
