@@ -50,7 +50,7 @@ export default function Landing() {
                 backgroundImage: `url(${bgImg})` }}>
                 <button onClick={() => setSignInShow(true)}
                     style={{ margin: "15rem",  padding:"3px", border: "0px", borderRadius:"10px", backgroundColor: "#F5F5F5", height: "80px", width:"500px",  marginTop: "7rem",
-                        marginLeft: "14rem", backgroundRepeat: "no-repeat", backgroundSize: "15%", backgroundPositionX: "10px",  backgroundPositionY: "center",
+                        marginLeft: "4rem", backgroundRepeat: "no-repeat", backgroundSize: "15%", backgroundPositionX: "10px",  backgroundPositionY: "center",
                         backgroundImage: `url(${iconbtn})` }}>
                     <span className="py-5" style={{ fontWeight: "700", color: "#ff6185", fontSize: "20px",  marginLeft: "4rem" }} >
                         Konsultasi Dengan Dokter
