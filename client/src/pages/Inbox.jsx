@@ -46,15 +46,15 @@ export default function Inbox() {
                                             Last update:{" "}
                                             {moment(item?.updatedAt).format("DD MMMM YYYY")}
                                         </small>
-                                        <div className="mt-1 ms-4 cons-box">Keluhan: {item?.desc}</div>
+                                        <div className="mt-2">Keluhan: {item?.desc}</div>
                                     </div>
                                     <div className="ms-3 d-block">
                                         <p className="d-flex justify-content-end">
                                             {moment(item?.createdAt).format("DD MMMM YYYY")}
                                         </p>
-                                        <p style={{ color: "#ff6185", fontWeight: "700" }}>
+                                        {/* <p style={{ color: "#ff6185", fontWeight: "700" }}>
                                             {item?.user?.name}
-                                        </p>
+                                        </p> */}
                                     </div>
                                 </div>
                             </Card.Body>
