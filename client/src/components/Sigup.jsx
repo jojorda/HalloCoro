@@ -17,8 +17,6 @@ export default function Signup({ signUpShow, setSignUpShow, signUpHere, setSignI
          phone: "",
          address: "",
         });
-
-        
         
     const {
         name,
@@ -66,57 +64,15 @@ export default function Signup({ signUpShow, setSignUpShow, signUpHere, setSignI
             const body = JSON.stringify(form);
 
             const response = await API.post("/register", body, config);
-                // const alert = (
-                    <Alert variant="success" className="py-1">
-                        Success, Silahkan Login ..
-                    </Alert>
-                // );
-                console.log("habis register : ", response);
-                
-                // setMessage(alert);
+            alert("Register succses, Silahkan Sign In ..!");      
+           
+                // console.log("habis register : ", response); 
                 setSignUpShow(false)
-                setSignInShow(true)
-
-                setForm({
-                    name: "",
-                    username: "",
-                    email: "",
-                    password: "",
-                    listAs: "",
-                    gender: "",
-                    phone: "",
-                    address: "",
-                });
+                // setSignInShow(true
 
         } catch (error) {
+            alert("gagal")
             console.log(error);
-
-            if (error) {
-                const alertPassword = (
-                    <Alert variant="danger" className="py-1">
-                        Something wrong..
-                    </Alert>
-                );
-                setMessage(alertPassword);
-            }
-
-            if (error.message === "Request failed with status code 400") {
-                const alertPassword = (
-                    <Alert variant="danger" className="py-1">
-                        Failed, please fill all fields..
-                    </Alert>
-                );
-                setMessage(alertPassword);
-            }
-
-            if (error.response.data.code === 402) {
-                const alertPassword = (
-                    <Alert variant="danger" className="py-1">
-                        Username not available!
-                    </Alert>
-                );
-                setMessage(alertPassword);
-            }
         }
     });
 

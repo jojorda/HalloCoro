@@ -20,6 +20,8 @@ type User struct {
 type UserProfileResponse struct {
 	ID     int    `json:"id"`
 	Name   string `json:"name"`
+	Username string `json:"username"`
+	Email    string `json:"email"`
 	ListAs string `json:"listAs"`
 }
 
