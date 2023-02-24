@@ -49,8 +49,8 @@ export default function Landing() {
                 style={{ marginTop: "10vh", height: "58vh", width: "auto",  backgroundPosition: "center top", backgroundSize: "100%", backgroundRepeat: "no-repeat", padding:"100px",
                 backgroundImage: `url(${bgImg})` }}>
                 <button onClick={() => setSignInShow(true)}
-                    style={{ margin: "15rem",  padding:"3px", border: "0px", borderRadius:"10px", backgroundColor: "#F5F5F5", height: "70px", width:"400px",  marginTop: "7rem",
-                        marginLeft: "4rem", backgroundRepeat: "no-repeat", backgroundSize: "15%", backgroundPositionX: "10px",  backgroundPositionY: "center",
+                    style={{ margin: "15rem",  padding:"3px", border: "0px", borderRadius:"10px", backgroundColor: "#F5F5F5", height: "70px", width:"400px",  marginTop: "12rem",
+                        marginLeft: "8rem", backgroundRepeat: "no-repeat", backgroundSize: "15%", backgroundPositionX: "10px",  backgroundPositionY: "center",
                         backgroundImage: `url(${iconbtn})` }}>
                     <span className="py-5" style={{ fontWeight: "700", color: "#ff6185", fontSize: "20px",  marginLeft: "4rem" }} >
                         Konsultasi Dengan Dokter
