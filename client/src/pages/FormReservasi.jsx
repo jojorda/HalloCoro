@@ -81,7 +81,7 @@ export default function ReservationPage() {
     });
 
     return (
-        <div>
+        <div className="d-flex justify-content-center">
             <div className="container p-5" style={{ marginTop: "10vh", marginRight: "10px" }} >
                 <h2 style={{ color: "#FF6185", fontWeight: "700", marginLeft:"300px" }}>
                     Reservasi Consultation
