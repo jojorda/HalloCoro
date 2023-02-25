@@ -12,7 +12,7 @@ export default function Inbox() {
     document.title = "HelloCorona | " + title;
 
     const [state, dispatch] = useContext(UserContext)
-
+    const id = state.user.id
     let { data: consultations } = useQuery("cacheConsultations", async () => {
         const response = await API.get("/consultations");
         return response.data.data;

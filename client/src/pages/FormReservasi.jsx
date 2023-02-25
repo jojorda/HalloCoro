@@ -73,7 +73,7 @@ export default function ReservationPage() {
             const body = JSON.stringify(form);
 
             const response = await API.post("/consultation", body, config);
-            // console.log(response);
+            console.log(response);
             navigate("/patient/inbox");
         } catch (error) {
             console.log(error);
