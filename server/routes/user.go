@@ -16,7 +16,8 @@ func UserRoutes(r *mux.Router) {
 	// r.HandleFunc("/user", h.CreateUser).Methods("POST")
 	r.HandleFunc("/users", h.FindUsers).Methods("GET")
 	r.HandleFunc("/user/{id}", h.GetUser).Methods("GET")
-	r.HandleFunc("/user/{id}", h.DeleteUser).Methods("DELETE")
-	r.HandleFunc("/user/{id}", middleware.UploadFile(h.UpdateUser)).Methods("PATCH")
-	r.HandleFunc("/change-image/{id}", middleware.Auth(middleware.UploadFile(h.ChangeImage))).Methods("PATCH")
+	r.HandleFunc("/user", middleware.Auth(h.CreateUser)).Methods("POST")
+	r.HandleFunc("/user/{id}", middleware.Auth(h.UpdateUser)).Methods("PATCH")
+	r.HandleFunc("/user/{id}", middleware.Auth(h.DeleteUser)).Methods("DELETE")
+	r.HandleFunc("/change-image/{id}", middleware.UploadFile(h.ChangeImage)).Methods("PATCH")
 }

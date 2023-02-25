@@ -14,9 +14,9 @@ func ConsultationRoutes(r *mux.Router) {
 	h := handlers.HandlerConsultation(consultationRepository)
 
 	r.HandleFunc("/consultation", middleware.Auth(h.CreateConsultation)).Methods("POST")
-	r.HandleFunc("/consultations", h.FindConsultation).Methods("GET")
-	r.HandleFunc("/consultation/{id}", h.GetConsultation).Methods("GET")
-	r.HandleFunc("/consultation/{id}", h.UpdateConsultation).Methods("PATCH")
-	// r.HandleFunc("/consultation/{id}", middleware.Auth(h.DeleteConsultation)).Methods("DELETE")
+	r.HandleFunc("/consultations",  middleware.Auth(h.FindConsultation)).Methods("GET")
+	r.HandleFunc("/consultation/{id}",  middleware.Auth(h.GetConsultation)).Methods("GET")
+	r.HandleFunc("/consultation/{id}",  middleware.Auth(h.UpdateConsultation)).Methods("PATCH")
+	r.HandleFunc("/consultation/{id}", middleware.Auth(h.DeleteConsultation)).Methods("DELETE")
 
 }
