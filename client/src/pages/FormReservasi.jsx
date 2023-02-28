@@ -58,7 +58,8 @@ export default function ReservationPage() {
         });
     };
     // console.log(form);
-
+    
+    // mengirimkan query GraphQL pada server
     const handleSubmit = useMutation(async (e) => {
         try {
             e.preventDefault();

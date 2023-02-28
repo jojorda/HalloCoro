@@ -26,31 +26,28 @@ export default function AddArticle() {
             [e.target.name]:
                 e.target.type === "file" ? e.target.files : e.target.value,
         });
-        // Create image url for preview
+        // Buat url gambar untuk pratinjau
         if (e.target.type === "file") {
             let url = URL.createObjectURL(e.target.files[0]);
             setPreview(url);
         }
     };
-
+    // mengirimkan query GraphQL pada server
     const handleSubmit = useMutation(async (e) => {
         try {
             e.preventDefault();
-
             // Configuration
             const config = {
                 headers: {
                     "Content-type": "multipart/form-data",
                 },
             };
-
-            // Store data with FormData as object
+            // Menyimpan data dengan FormData sebagai objek
             const formData = new FormData();
             formData.set("title", form.title);
             formData.set("image", form.image[0], form.image[0].name);
             formData.set("desc", form.desc);
             // console.log(formData);
-
             const response = await API.post("/article", formData);
             // console.log(response);
 
@@ -78,8 +75,8 @@ export default function AddArticle() {
                             <div>
                                 <img src={preview} alt={preview}
                                     style={{ width: "1110px", height: "500px",
-                                        objectFit: "cover",
-                                    }} />
+                                        objectFit: "cover" }}
+                                 />
                             </div>
                         )}
                         <Form.Label for="image" type="file" className="label">

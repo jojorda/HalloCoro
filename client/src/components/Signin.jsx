@@ -24,7 +24,7 @@ export default function Signin({ signInShow, setSignInShow, signInHere }) {
             [e.target.name]: e.target.value,
         });
     };
-    
+    // mengirimkan query GraphQL pada server
     const handleSubmit = useMutation(async (e) => {
         try {
             e.preventDefault();
@@ -67,7 +67,6 @@ export default function Signin({ signInShow, setSignInShow, signInHere }) {
                 );
                 setMessage(alertPassword);
             }
-            
         }
     });
 

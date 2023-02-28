@@ -31,21 +31,21 @@ export default function ChangeImageModal(props) {
       [e.target.name]: e.target.type === "file" ? e.target.files : e.target.value,
     });
 
-    // Create image url for preview
+    // Buat url gambar untuk pratinjau
     if (e.target.type === "file") {
       let url = URL.createObjectURL(e.target.files[0]);
       setPreview(url);
     }
   };
-
+   // mengirimkan query GraphQL pada server
   const handleSubmit = useMutation(async (e) => {
     try {
       e.preventDefault();
-      // Store data with FormData as object
+      // Menyimpan data dengan FormData sebagai objek
       const formData = new FormData();
       formData.set("image", form.image[0]);
     
-      // Insert product data
+      // Menyisipkan data produk
       const response = await API.patch("/change-image/" + tokn.id, formData);
       console.log(response.data);
 

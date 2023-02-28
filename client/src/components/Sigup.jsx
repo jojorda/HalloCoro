@@ -50,7 +50,7 @@ export default function Signup({ signUpShow, setSignUpShow, signUpHere, setSignI
             [e.target.name]: e.target.value,
         });
     };
-
+    // mengirimkan query GraphQL pada server
     const handleSubmit = useMutation(async (e) => {
         try {
             e.preventDefault();
